@@ -216,12 +216,12 @@ cartDatabase:
 shoppingAssistantService:
   create: true
   name: shoppingassistantservice
-  alloydbClusterName: "microservices-demo"
-  alloydbInstanceName: "microservices-demo"
-  alloydbDatabaseName: "shoppingassistant"
-  alloydbTableName: "catalog_items"
-  projectId: "PROJECT_ID"
-  region: "europe-west10"
+  alloydbClusterName: microservices-demo
+  alloydbInstanceName: microservices-demo-primary
+  alloydbDatabaseName: shoppingassistant
+  alloydbTableName: catalog_items
+  projectId: ""
+  region: europe-west1
   resources:
     requests:
       cpu: 100m
