@@ -9,7 +9,6 @@ function "get_tag" {
     tags,
     [
       "${IMAGE_REPO}/${name}:${IMAGE_TAG}",
-      "${IMAGE_REPO}/${name}:latest"
     ]
   )
 }
