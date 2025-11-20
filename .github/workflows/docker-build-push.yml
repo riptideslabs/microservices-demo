@@ -35,9 +35,12 @@ jobs:
 
       - name: Build and push images with Docker Bake
         uses: docker/bake-action@v6
+        env:
+          IMAGE_TAG: ${{ github.ref_name }}
         with:
           files: docker-bake.hcl
           targets: default
           push: true
           set: |
-            IMAGE_TAG=${{ github.ref_name }}
+            *.cache-from=type=gha
+            *.cache-to=type=gha,mode=max
