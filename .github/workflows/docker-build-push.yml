@@ -32,6 +32,7 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ github.token }}
 
+
       - name: Build and push images with Docker Bake
         uses: docker/bake-action@v4
         with:
@@ -39,5 +40,4 @@ jobs:
           targets: default
           push: true
           set: |
-            *.cache-from=type=gha
-            *.cache-to=type=gha,mode=max
+            IMAGE_TAG=${{ github.ref_name }}
