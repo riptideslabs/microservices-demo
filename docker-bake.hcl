@@ -4,8 +4,14 @@ variable "IMAGE_REPO" {default = "ghcr.io/riptideslabs/microservices-demo"}
 variable "IMAGE_TAG" {default = "test"}
 
 function "get_tag" {
-    params = [tags, name]
-      result = [for t in tags : replace(t, "${name}", name)]
+  params = [tags, name]
+  result = coalescelist(
+    tags,
+    [
+      "${IMAGE_REPO}/${name}:${IMAGE_TAG}",
+      "${IMAGE_REPO}/${name}:latest"
+    ]
+  )
 }
 
 # docker-bake.hcl
@@ -37,10 +43,7 @@ target "_common" {
 }
 
 target "docker-metadata-action" {
-  tags = [
-    "${IMAGE_REPO}/${name}:${IMAGE_TAG}",
-    # "${IMAGE_REPO}/${name}:latest"
-  ]
+  tags = []
 }
 
 target "emailservice" {
