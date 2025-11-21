@@ -46,7 +46,7 @@ jobs:
         shell: bash
         run: |
           TAG="${GITHUB_REF##*/}"
-          VERSION="${TAG##*-}"
+          VERSION="${TAG##*-v}"
           echo "version=$VERSION" >> "$GITHUB_OUTPUT"
 
       - name: Helm package
