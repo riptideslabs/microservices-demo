@@ -16,6 +16,12 @@ FROM eclipse-temurin:21.0.7_6-jdk AS builder
 
 WORKDIR /app
 
+# Ensure OS CA certs and small utilities are present (helps TLS) and keep layer small
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends ca-certificates wget curl gnupg2 haveged \
+ && update-ca-certificates \
+ && rm -rf /var/lib/apt/lists/*
+
 COPY ["build.gradle", "gradlew", "./"]
 COPY gradle gradle
 RUN chmod +x gradlew

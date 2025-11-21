@@ -1,0 +1,61 @@
+{
+    "bump-patch-for-minor-pre-major": true,
+    "separate-pull-requests": true,
+    "sequential-calls": true,
+    "include-component-in-tag": true,
+    "skip-github-release": false,
+    "packages": {
+        "helm-chart": {
+            "package-name": "helm",
+            "release-type": "helm"
+        },
+        "src/adservice": {
+            "package-name": "image-adservice",
+            "release-type": "simple"
+        },
+        "src/cartservice": {
+            "package-name": "image-cartservice",
+            "release-type": "simple"
+        },
+        "src/checkoutservice": {
+            "package-name": "image-checkoutservice",
+            "release-type": "simple"
+        },
+        "src/currencyservice": {
+            "package-name": "image-currencyservice",
+            "release-type": "simple"
+        },
+        "src/emailservice": {
+            "package-name": "image-emailservice",
+            "release-type": "simple"
+        },
+        "src/frontend": {
+            "package-name": "image-frontend",
+            "release-type": "simple"
+        },
+        "src/loadgenerator": {
+            "package-name": "image-loadgenerator",
+            "release-type": "simple"
+        },
+        "src/paymentservice": {
+            "package-name": "image-paymentservice",
+            "release-type": "simple"
+        },
+        "src/productcatalogservice": {
+            "package-name": "image-productcatalogservice",
+            "release-type": "simple"
+        },
+        "src/recommendationservice": {
+            "package-name": "image-recommendationservice",
+            "release-type": "simple"
+        },
+        "src/shippingservice": {
+            "package-name": "image-shippingservice",
+            "release-type": "simple"
+        },
+        "src/shoppingassistantservice": {
+            "package-name": "image-shoppingassistantservice",
+            "release-type": "simple"
+        }
+    }
+}
