@@ -55,6 +55,6 @@ jobs:
         with:
           files: |
             ${{ inputs.bake-file }}
-          targets: ${{ inputs.bake-targets }}
+          targets: ${{ inputs.bake-target }}
           push: ${{ github.event_name == 'push' && startsWith(github.ref, 'refs/tags') }}
           provenance: false
