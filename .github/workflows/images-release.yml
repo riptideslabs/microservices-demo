@@ -1,4 +1,4 @@
-name: ci-release-images
+name: Release images
 
 on:
   push:
