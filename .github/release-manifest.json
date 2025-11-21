@@ -1,3 +1,15 @@
 {
-    "helm-chart": "0.10.6"
+    "helm-chart": "0.10.6",
+    "src/adservice": "0.0.1",
+    "src/cartservice": "0.0.1",
+    "src/checkoutservice": "0.0.1",
+    "src/currencyservice": "0.0.1",
+    "src/emailservice": "0.0.1",
+    "src/frontend": "0.0.1",
+    "src/loadgenerator": "0.0.1",
+    "src/paymentservice": "0.0.1",
+    "src/productcatalogservice": "0.0.1",
+    "src/recommendationservice": "0.0.1",
+    "src/shippingservice": "0.0.1",
+    "src/shoppingassistantservice": "0.0.1"
 }
