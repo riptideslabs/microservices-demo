@@ -3,7 +3,7 @@ name: Build and Push
 on:
   workflow_call:
     inputs:
-      bake-targets:
+      bake-target:
         required: true
         type: string
         description: "Bake target"
